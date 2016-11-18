@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>miss</title>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="UI/css/miss.css">
+</head>
+<body>
+<p  class="de1">1</p>
+<div class="demo"></div>
+<div class="demo"></div>
+<div class="demo"></div>
+<div class="demo"></div>
+<p  class="de1">11</p>
+<p  class="de1">12</p>
+<p  class="de1">13</p>
+<p  class="de1">14</p>
+</body>
+<script type="text/javascript" src="support/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="miss.js"></script>
+<script type="text/javascript">
+/*$(function(){
+	$("#replace-str").blur(function(){
+		// alert()
+		var str        =  $(this).val()
+		str            =  str.replace(/\s+/g,"");
+		console.log( str )
+		$("#show-replace-str").empty().html(str)
+		// $("#show-replace-str").html(str)
+	})
+})*/
+    miss.config({
+    	path    :  {
+    		root   :  "./"
+    	}
+    })
+    missExport('react@tpl' , {
+    	name      :  "react test"
+    })
+    miss.import("template").from("http://img1-txp.tuniucdn.com/site/m2015/js/plugins/template/template.min.js?v=2015122967")
+	/*miss.createServer('test',function( $server ){
+		console.log( $server )
+	})*/
+	var action    =  miss("test",function($server){
+
+		console.log( miss.import('tpl').from({type:'react'}) )
+	})
+	console.log( action )
+	miss.start('test')
+</script>
+</html>

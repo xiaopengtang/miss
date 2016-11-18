@@ -1,0 +1,31 @@
+{
+	"path"            :   {
+		"root"        :   "./"
+	}
+	//支持的插件
+	, "support"       :  {
+		"underscore"  :  "support/underscore-min.js"
+	}
+	, "widget"        :  {
+		"listener"    :  "hook/listener.widget.js"
+	}
+	, "hook"          :  {
+		"showLog"     :  "hook/showLog.hook"
+		// , "template"  :  "hook/template.hook"
+		, "defaults"  :  "hook/defaults.hook"
+	}
+	, "parseCore"     :  {
+		"defaults"    :  "hook/defaults.parse"
+	}
+	//插件列表
+	, "plugin"        :  {}
+	//路径别称
+	, "alies"         :  {}
+	//初始化任务 task , hook , plugin etc..
+	, "init"          :  {
+		"task"        :  ["test"]
+		, "widget"    :  ["listener"]
+	}
+	, "showLog"       :  false
+	
+}

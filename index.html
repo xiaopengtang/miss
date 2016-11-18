@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>miss</title>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="UI/css/miss.css">
+</head>
+<body>
+<textarea id="replace-str" style="width:100%;height:50rem"></textarea>
+<pre id="show-replace-str" style="width:100%;height:40%"></pre>
+</body>
+<script type="text/javascript" src="support/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="miss.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#replace-str").blur(function(){
+		// alert()
+		var str        =  $(this).val()
+		str            =  str.replace(/\s+/g,"");
+		console.log( str )
+		$("#show-replace-str").empty().html(str)
+		// $("#show-replace-str").html(str)
+	})
+})
+	/*miss.createServer('test',function( $server ){
+
+		
+		console.log( $server )
+	})
+	miss.start()*/
+</script>
+</html>
